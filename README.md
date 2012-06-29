@@ -1,2 +1,2 @@
-SemPamela
+Seminario de Pamela Perez
 =========
