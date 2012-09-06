@@ -112,14 +112,88 @@ adds table of contents entry
 \end_layout
 
 \begin_layout Standard
-Resumidamente se puede decir en este
-\begin_inset CommandInset citation
-LatexCommand cite
-key "hungerford1974algebra,stewart2004galois,artin1997galois"
+Las construcciones geométricas han interesado a los matemáticos de todas
+ las épocas, particularmente aquellas que sólo pueden efectuarse utilizando
+ una regla y un compás, surgiendo de esta manera múltiples interrogantes
+ y resultados interesantes.
+\end_layout
 
+\begin_layout Standard
+Muchos esfuerzos se han hecho para conseguir determinar qué se puede construir
+ con tales instrumentos y qué no.
+ Está claro que son herramientas muy potentes que nos permiten construir
+ una infinidad de objetos pero, ¿dónde está su límite? ¿es posible construir
+ cualquier cosa que nos planteemos? Está claro que no, pues cualquier figura
+ que no conste de arcos de circunferencia y segmentos queda fuera de su
+ alcance (aunque se pueda acceder a una cantidad finita de puntos de dicha
+ figura, como es el caso de la elipse).
+\end_layout
+
+\begin_layout Standard
+El propósito de este trabajo es mostrar qué construcciones geométricas pueden
+ hacerse con el uso de una regla no graduada y un compás, de hecho,este
+ tipo de construcciones han ocupado tradicionalmente un lugar importante
+ en la enseñanza de la Geometría plana, ya sea por su interés práctico como
+ teórico.
+\end_layout
+
+\begin_layout Standard
+Mostraremos dos perspectivas distintas bajo las cuales se puede abordar
+ esta temática, la primera de ellas es estudiar construcciones concretas
+ realizadas con regla y compás como así también con la asistencia del software
+ libre Geogebra desde la Geometría Sintética, y la segunda surge del estudio
+ algebraico de las mismas.
+ 
+\end_layout
+
+\begin_layout Standard
+Si bien muchos problemas de la geometría plana pueden resolverse con construccio
+nes que sólo utilizan regla y compás, prestaremos especial importancia a
+ las construcciones de polígonos regulares bajo los dos puntos de vistas
+ antes mencionados.
+\end_layout
+
+\begin_layout Standard
+Más adelante veremos que la humanidad ha conseguido resolver el problema
+ de caracterizar aquéllas construcciones susceptibles de ser construidas
+ con regla y compás, lo cual, aunque sea completamente inútil, es un alivio.
+ En concreto podremos comprender por qué los tres problemas clásicos de
+ la Antigüedad, a saber, la trisección del ángulo, la duplicación del cubo
+ y la cuadratura del círculo, no son resolubles utilizando únicamente estas
+ herramientas.
+ La historia sobre la resolución de los tres problemas geométricos clásicos
+ está llena de anécdotas, y como consecuencia de ellos surgieron, por ejemplo,
+ las secciones cónicas, cálculo aproximado del número 
+\begin_inset Formula $\pi$
 \end_inset
 
- resumen...
+, el método de exhaución como predecesor del cálculo de límites o la introducció
+n de curvas trascendentes.
+\end_layout
+
+\begin_layout Itemize
+punto de vista matemático, las construcciones de regla y compás no tienen
+ por objetivo la realización efectiva de la construcción, sino mostrar por
+ un encadenamiento lógico de proposiciones que algo es construible con regla
+ y compás.
+\end_layout
+
+\begin_layout Itemize
+Las figuras que manejamos en geometría no existen en la realidad, son idealizaci
+ones de objetos de la realidad material.
+ No existe, por ejemplo, la recta ideal, pues cualquier recta material mirada
+ al microscopio resultaría curva; no existe el punto ideal, carente de dimension
+es; no existe la superficie ideal, carente de grosor .
+ Aunque las figuras ideales no existen, se pueden estudiar con ayuda de
+ sus representaciones materiales.
+ Desde los griegos, la regla y el compás contribuyeron a materializar las
+ ideas geométricas.
+ Las construcciones que se realizan con estos instrumentos ayudan a comprender
+ mejor las propiedades geométricas.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body

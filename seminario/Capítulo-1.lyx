@@ -3,71 +3,19 @@
 \begin_document
 \begin_header
 \textclass scrbook
-\begin_preamble
-% increase link area for cross-references and autoname them
-\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
-\pagestyle{fancy}
-\fancyfoot[LE,RO]{\thepage}
-\newlength{\abc}
-\settowidth{\abc}{\space}
-\AtBeginDocument{%
-\addto\extrasenglish{
- \renewcommand{\equationautorefname}{\hspace{-\abc}}
- \renewcommand{\sectionautorefname}{sec.\negthinspace}
- \renewcommand{\subsectionautorefname}{sec.\negthinspace}
- \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
- \renewcommand{\figureautorefname}{Fig.\negthinspace}
- \renewcommand{\tableautorefname}{Tab.\negthinspace}
-}
-}
-
-% in case somebody want to have the label "Gleichung"
-%\renewcommand{\eqref}[1]{Gleichung~(\negthinspace\autoref{#1})}
-
-% put the link to figure floats to the beginning
-% of the figure and not to its end
-\usepackage[figure]{hypcap}
-
-% the pages of the TOC is numbered roman
-% and a pdf-bookmark for the TOC is added
-\let\myTOC\tableofcontents
-\renewcommand\tableofcontents{%
-  \frontmatter
-  \pdfbookmark[1]{\contentsname}{}
-  \myTOC
-  \mainmatter }
-
-% make caption labels bold
-\setkomafont{captionlabel}{\bfseries}
-\setcapindent{1em}
-
-% enable calculations
-\usepackage{calc}
-
-% fancy page header/footer settings
-\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
-
-% increase the bottom float placement fraction
-\renewcommand{\bottomfraction}{0.5}
-
-% avoid that floats are placed above its sections
-\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
-\end_preamble
-\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
 \use_default_options true
 \begin_modules
-customHeadersFooters
 theorems-ams
+customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
 \language spanish
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman lmodern
-\font_sans lmss
-\font_typewriter lmtt
+\font_roman default
+\font_sans default
+\font_typewriter default
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
@@ -80,51 +28,34 @@ theorems-ams
 \output_sync 0
 \bibtex_command default
 \index_command default
-\float_placement h
-\paperfontsize 12
+\float_placement H
+\paperfontsize default
 \spacing single
-\use_hyperref true
-\pdf_title "Your title"
-\pdf_author "Your name"
-\pdf_bookmarks true
-\pdf_bookmarksnumbered true
-\pdf_bookmarksopen true
-\pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
-\pdf_pdfborder true
-\pdf_colorlinks false
-\pdf_backref false
-\pdf_pdfusetitle false
-\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
-\papersize a4paper
+\use_hyperref false
+\papersize default
 \use_geometry false
-\use_amsmath 2
+\use_amsmath 1
 \use_esint 1
 \use_mhchem 1
 \use_mathdots 1
-\cite_engine natbib_numerical
+\cite_engine basic
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\use_refstyle 0
-\branch NoChildDocument
-\selected 0
-\filename_suffix 0
-\color #ff0000
-\end_branch
+\use_refstyle 1
 \index Index
 \shortcut idx
 \color #008000
 \end_index
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation skip
-\defskip medskip
+\paragraph_separation indent
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
-\papersides 2
-\paperpagestyle fancy
+\papersides 1
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -134,173 +65,27 @@ theorems-ams
 
 \begin_body
 
-\begin_layout Left Header
-\begin_inset Argument
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-chaptername
-\end_layout
-
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thechapter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-rightmark
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Enable page headers and add the chapter to the header line.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Right Header
-\begin_inset Argument
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-leftmark
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagestyle{fancy} 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fancyfoot[LE,RO]{
-\backslash
-thepage}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Center Footer
-
-\end_layout
-
-\begin_layout Chapter
-Construcciones Elementales
-\end_layout
-
 \begin_layout Section
 Los Instrumentos
 \end_layout
 
 \begin_layout Standard
-Las construcciones con regla y compás consisten en el trazado de rectas
- y circunferencias y la determinación de puntos de intersección entre las
- mismas a partir del uso exclusivo de una regla y un compás ideales o teóricos.
+Las construcciones con regla y compás consisten en la determinación de puntos,
+ rectas y circunferencias a partir del uso exclusivo de una regla y un compás
+ ideales.
  Este adjetivo se refiere a que estos son idealizaciones de las reglas y
  compases del mundo real.
- Son conceptos matemáticos abstractos, no son instrumentos físicos.
+ Son conceptos matemáticos abstractos, no son instrumentos físico.
  Representan la perfección de la mente y deben utilizarse para crear construccio
-nes ideales las cuales son tan concluyentes como el álgebra
-\begin_inset CommandInset citation
-LatexCommand citet
-key "coxeter1996geometry"
-
-\end_inset
-
-.
- El verbo trazar se refiere, también, a un ente abstracto, pues es humanamente
- imposible el trazado, por ejemplo, de una recta.
- Es decir, con regla y con compás, nos referiremos a procedimientos teóricos,
- no concretos ni prácticos.
- Hecha esta aclaración estamos en condiciones de caracterizar tales instrumentos
-:
+nes ideales las cuales son tan concluyentes como el álgebra.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+Hecha esta aclaración estamos en condiciones de caracterizar tales instrumentos:
+\end_layout
+
+\begin_layout Standard
 La
-\shape slanted
- regla
-\shape default
- es un instrumento para trazar una recta, dados dos puntos diferentes.
- Podemos decir intuitivamente que la
 \shape slanted
  regla
 \shape default
@@ -308,205 +93,86 @@ La
  se quiera), carece de marcas que permitan medir con ella, y sólo tiene
  un borde.
  Puede usarse sólo con un fin : trazar una recta entre dos puntos que ya
- existan en el papel, o bien 
-\begin_inset Quotes eld
-\end_inset
-
-prolongar
-\begin_inset Quotes erd
-\end_inset
-
- (tanto como se desee) una de esas rectas.
+ existan en el papel, o bien prolongar (tanto como se desee) una de esas
+ rectas.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 El 
 \shape slanted
 compás
-\begin_inset Foot
-status open
+\shape default
+ tiene la particularidad de que se cierra al instante de separarse del papel,
+ olvidadando el último radio utilizado.
+ Esto impide repetir o reutilizar una abertura predeterminada entre sus
+ puntas y trasladar distancias de manera directa.
+ Sólo puede abrirse entre puntos que hayan sido previamente construidos.
+ Su función es trazar circunferencia con cualquier punto dado como centro
+ y un radio también determinado por un punto prefijado.
+ Los compases con estas característica se denominan Antiguo o Euclideo.
+\end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 A diferencia de éste, el compás denominado compás Moderno conserva su abertura
  y por tanto puede utilizarse para transportar distancias.
  Puede parecer que el compás moderno es más potente que el compás euclídeo
- pero no es así, cualquier construcción que pueda efectuarse con un compás
+ pero no es así, cualquier construccción que pueda efectuarse con un compás
  moderno también puede llevarse a cabo (tal vez por un camino más largo)
  por el compás euclídeo.
  En otras palabras, el compás euclídeo y el moderno resultan equivalentes.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "redondo2004galois"
-
-\end_inset
-
-
 \end_layout
 
-\end_inset
-
-
-\shape default
- (o compás 
-\emph on
-antiguo
-\emph default
-) solamente traza circunferencias (perfectas) entre puntos dados o construidos
- de antemano, usando uno de los puntos como centro y el otro como un punto
- por donde pasa la misma.
- Intuitivamente, tiene la particularidad de que se cierra al instante de
- separarse del papel, 
-\begin_inset Quotes eld
-\end_inset
-
-
-\emph on
-olvidando
-\emph default
-
-\begin_inset Quotes erd
-\end_inset
-
- el último radio utilizado.
- Esto impide repetir o reutilizar una abertura predeterminada entre sus
- puntas y trasladar distancias de manera directa.
- 
+\begin_layout Standard
+En principio puede parecer que las normas que hemos impuesto para nuestras
+ herramientas de trabajo son demasiado restrictivas, que podremos hacer
+ poco con ellas, pero en realidad no es así.
+ Estos instrumentos con estas características dan muchísimo juego, como
+ podremos comprobar de aquí en adelante.
 \end_layout
 
 \begin_layout Section
-Construcciones Básicas
+Reglas Básicas
+\end_layout
+
+\begin_layout Standard
+Una construcción con regla y compás en sentido estricto no admite que se
+ tracen rectas o circunferencias aleatorias.
+ Para que una recta se pueda considerar 
+\shape italic
+‘construida’
+\shape default
+ es necesario tener construidos dos de sus puntos, sobre los que apoyar
+ la regla; un punto está 
+\shape italic
+construido
+\shape default
+ cuando lo hemos determinado como intersección de dos rectas, dos circunferencia
+s, o una recta y una circunferencia; finalmente, para construir una circunferenc
+ia tenemos que tener construido su centro, sobre el que clavar el compás,
+ y su radio ha de ser la distancia entre dos puntos construidos, con los
+ que fijar la apertura del compás.
+\end_layout
+
+\begin_layout Section
+Construcciones Elementales
 \end_layout
 
 \begin_layout Standard
 Es claro que a partir de un único punto es imposible realizar construcción
  alguna.
- El menor número de puntos para iniciar una construcción es dos.
+ El menor número de puntos para iniciar una construcción es 2.
  Una construcción a partir de dos puntos es una construcción 
 \emph on
 absoluta
 \emph default
 .
- 
-\end_layout
-
-\begin_layout Example
-Dados los puntos 
-\begin_inset Formula $O$
-\end_inset
-
- y 
-\begin_inset Formula $U$
-\end_inset
-
- encontrar un punto 
-\begin_inset Formula $A$
-\end_inset
-
- tal que 
-\begin_inset Formula $U$
-\end_inset
-
- sea punto medio del segmento 
-\begin_inset Formula $\overline{OA}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Una construcción que acepte como datos más de dos puntos es una construcción
+ Una construcción que acepte como datos más de dos puntos es una construcción
  
 \emph on
 relativa
 \emph default
  a los datos.
- 
-\end_layout
-
-\begin_layout Example
-Dada una recta
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Cuando se da un objeto geométrico como una recta, se da la posibilidad de
- decidir que puntos están en relación de incidencia con dicha recta, es
- decir, se da el conocimiento de los puntos que están en ella y de los que
- no.
- Por ejemplo, se puede tomar un punto cualquiera de la recta, o tomar uno
- cualquiera que no esté en la misma; lo que no significa que se tenga determinad
-o algún punto sobre ella.
- Así también, si se da un segmento, se conocen los extremos, pero 
-\series bold
-no
-\series default
- el punto medio.
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $r$
-\end_inset
-
- y un punto 
-\begin_inset Formula $P$
-\end_inset
-
- exterior a dicha recta, determinar tres puntos distintos que pertenezcan
- a la parábola de foco 
-\begin_inset Formula $P$
-\end_inset
-
- y de directriz 
-\begin_inset Formula $r$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Example
-Llamaremos construcciones básicas a las siguientes cinco construcciones:
-\end_layout
-
-\begin_layout Itemize
-Trazar la recta que pasa por dos puntos.
- 
-\end_layout
-
-\begin_layout Itemize
-Trazar la circunferencia con centro en un punto y que pasa por otro punto.
-\end_layout
-
-\begin_layout Itemize
-Determinar el punto de intersección de dos rectas.
- 
-\end_layout
-
-\begin_layout Itemize
-Determinar el punto de intersección de una circunferencia con una recta.
-\end_layout
-
-\begin_layout Itemize
-Determinar el punto de intersección de dos circunferencias.
- 
-\end_layout
-
-\begin_layout Section
-Ejemplos de construcciones elementales
-\end_layout
-
-\begin_layout Standard
-Todas las construcciones elementales con regla y compás se logran a partir
- de sucesivas aplicaciones de las cinco 
-\emph on
-construcciones básicas
-\emph default
-.
- Y estas, a su vez, utilizan los puntos construidos en los pasos anteriores.
- Veamos algunos ejemplos:
+ Veamos algunos ejemplos de construcciones elementales:
 \end_layout
 
 \begin_layout Subsection
@@ -559,7 +225,7 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /media/KINGSTON/nuevo/Lyx/seminario/Ggb trabajo final/m3.png
+	filename Ggb trabajo final/m3.png
 	width 8cm
 
 \end_inset
@@ -672,13 +338,12 @@ Luego, con centro en
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /media/KINGSTON/nuevo/Lyx/seminario/Ggb trabajo final/b4.png
+	filename Ggb trabajo final/b4.png
 	width 8cm
-	groupId ConstrElem
 
 \end_inset
 
@@ -694,6 +359,10 @@ Construccion de la bisectríz de un ángulo
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -778,13 +447,12 @@ y
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /media/KINGSTON/nuevo/Lyx/seminario/Ggb trabajo final/p5.png
+	filename Ggb trabajo final/p5.png
 	width 8cm
-	groupId ConstrElem
 
 \end_inset
 
@@ -800,6 +468,10 @@ Construcción de la paralela a una recta por un punto exterior a la misma
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -917,13 +589,12 @@ reference "Figura 3.4"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /media/KINGSTON/nuevo/Lyx/seminario/Ggb trabajo final/s4.png
+	filename Ggb trabajo final/s4.png
 	width 8cm
-	groupId ConstrElem
 
 \end_inset
 
@@ -971,13 +642,12 @@ Ahora trazamos el segmento que une
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /media/KINGSTON/nuevo/Lyx/seminario/Ggb trabajo final/s5.png
+	filename Ggb trabajo final/s5.png
 	width 8cm
-	groupId ConstrElem
 
 \end_inset
 
@@ -997,6 +667,10 @@ División de un segmento en
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1078,13 +752,12 @@ Podemos iniciar la construcción trazando la recta que pasa por los puntos
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename /media/KINGSTON/nuevo/Lyx/seminario/Ggb trabajo final/pe4.png
+	filename Ggb trabajo final/pe4.png
 	width 8cm
-	groupId ConstrElem
 
 \end_inset
 
@@ -1103,23 +776,19 @@ Construcción de la perpendicular a una recta
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-Equivalencia entre el compás antiguo y el compás moderno
-\end_layout
-
 \begin_layout Standard
-Puede parecer que el compás moderno es más potente que el compás antiguo
- pero no es así.
- En Eves H.
- (1969) se encuentra una referencia al respecto, se indica que cualquier
- construcción que pueda efectuarse con un compás moderno también puede llevarse
- a cabo (tal vez por un camino más largo) por el compás antiguo.
- En otras palabras, el compás antiguo y el moderno resultan equivalentes.
+Al iniciar esta sección hemos señalado las caracteristicas particulares
+ del compás euclideo y del compás moderno, a continuacion mostraremos que
+ ambos son equivalentes.
  Para probar esto, es suficiente probar que podemos con el compás euclídeo
  construir una circunferencia dados un centro y un radio.
  En efecto si es posible transportar un segmento sobre una semirrecta dada
@@ -1128,10 +797,9 @@ Puede parecer que el compás moderno es más potente que el compás antiguo
  Esto permite en forma teórica transportar distancias; no sólo nos da la
  posibilidad de transportar un segmento, sino que además nos habilita a
  transportar una circunferencia (transportar una circunferencia es construir
- una circunferencia con centro en un punto dado y el mismo radio que el
- de la circunferencia dada) y a construir una circunferencia dados un centro
- y un radio.
- A partir de este resultado el “compás antiguo” puede materializarse por
+ con centro en un punto dado una circunferencia congruente a una dada) y
+ a construir una circunferencia dados un centro y un radio.
+ A partir de este resultado el “compás euclídeo” puede materializarse por
  nuestro compás físico, el compás moderno.
 \end_layout
 
@@ -1140,16 +808,11 @@ Transporte de Segmentos
 \end_layout
 
 \begin_layout Standard
-Para esta construcción partiremos de un segmento y una semirrecta dada:
-\end_layout
-
-\begin_layout Standard
-Si uno de los extremos del segmento es el origen de la semirrecta dada,la
- construcción es inmediata
+Para esta construccion partiremos de un segmento y una semirecta dada:
 \end_layout
 
 \begin_layout Section
-Construcción de Polígonos Regulares
+Polígonos Regulares
 \end_layout
 
 \begin_layout Subsection
@@ -1228,8 +891,8 @@ Se obtiene trazando las bisectrices de los ángulos centrales del hexágono
 \end_layout
 
 \begin_layout Standard
-Si trazamos las bisectrices de los ángulos centrales del triángulo equilátero,
- podemos construir un Hexágono regular.
+Si trazamos las bisectrises de los ángulos centrales del triángulo equilátero,
+ podemos construir un Hexagono regular.
 \end_layout
 
 \begin_layout Remark
